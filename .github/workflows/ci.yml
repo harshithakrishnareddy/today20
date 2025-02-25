@@ -28,9 +28,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-  
+
       - name: Deploy
-        run: |
-          # Replace with your actual deployment commands
-          scp your_yaml_file.yaml user@server:/path/to/deploy
-          ssh user@server 'systemctl restart your_service'
+        run: echo "Deploying the course configuration"
