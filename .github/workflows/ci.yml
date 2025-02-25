@@ -28,6 +28,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-
+  
       - name: Deploy
-        run: echo "Deploying the course configuration"
+        run: |
+          # Replace with your actual deployment commands
+          scp new1.yaml harshi@172.17.97.144:/etc/config
+          ssh harshi@172.17.97.144 'ssh.service'
