@@ -21,7 +21,7 @@ jobs:
         run: pip install pyyaml
 
       - name: Validate YAML
-        run: python -c "import yaml; yaml.safe_load(open('your_yaml_file.yaml'))"
+        run: python -c "import yaml; yaml.safe_load(open('new.yaml'))"
 
   deploy:
     runs-on: ubuntu-latest
