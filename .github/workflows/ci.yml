@@ -24,12 +24,8 @@ jobs:
         run: python -c "import yaml; yaml.safe_load(open('new1.yaml'))"
   deploy:
     runs-on: ubuntu-latest
-    needs: validate_yaml
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-  
-      - name: Deploy
-        run: |
-          scp new1.yaml harshi@172.17.97.144:/etc/config
-          ssh harshi@172.17.97.144 'systemctl restart ssh.service'
+      - name: Copy configuration
+        run: scp new1.yaml harshi@172.17.97.144:/etc/config
+      - name: Restart SSH service
+        run: ssh harshi@172.17.97.144 'systemctl restart ssh.service'
