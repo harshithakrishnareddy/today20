@@ -1,0 +1,30 @@
+#cooments
+#it is a key value pair
+#tags are kind of an array having mutiple strings in that
+courses:
+  - course: "python"
+    version: 3.8
+    price: &price 200
+    is_public: true
+    release_date: 2022-04-12 12:23:45
+    pre_enroll: null
+    tags:
+      - "python"
+      - "java"
+      - "yaml"
+    course_ta: ["hce", "aero", "auto"]
+    ta_details:
+      - name: "hce"
+        age: 25
+      - name: "aero"
+        age: 26
+      - {name: "auto", age: 27}
+    short_desc: >
+      This is a course on YAML
+      It is a very simple language
+      It is used for configuration files
+    long_desc: |
+      Now we can store
+      the indndation and
+      relted things
+    process_payment: *price
