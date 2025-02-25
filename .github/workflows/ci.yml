@@ -31,7 +31,6 @@ jobs:
   
       - name: Deploy
         run: |
-          # Replace with your actual deployment commands
           ssh harshi@172.17.97.144 'sudo mkdir -p /etc/config'
           scp new1.yaml harshi@172.17.97.144:/etc/config
           ssh harshi@172.17.97.144 'systemctl restart ssh.service'
